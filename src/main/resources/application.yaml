@@ -1,0 +1,14 @@
+server:
+  port: 8084
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      max:
+        retry:
+          attempt: 3
+      retry:
+        await:
+          time: 2000
+      group-id: streams-consumer
